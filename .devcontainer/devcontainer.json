@@ -1,0 +1,30 @@
+{
+	"name": "Python 3",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": { 
+			"PYTHON_VERSION": "3.10-bullseye"
+		}
+	},
+
+	"customizations": {
+		"vscode": {
+			"settings": { 
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"editor.defaultFormatter": "ms-python.black-formatter",
+				"editor.formatOnSave": true,
+				"black-formatter.args": ["--line-length", "100"]
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.black-formatter",
+				"ms-python.vscode-pylance",
+				"oderwat.indent-rainbow",
+				"ms-azuretools.vscode-docker",
+				"github.copilot"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}
